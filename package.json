@@ -1,0 +1,37 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Basic expressjs app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=app:* nodemon app.js",
+    "lint": "eslint app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "body-parser": "1.18.3",
+    "chalk": "2.4.1",
+    "crypto-js": "^3.1.9-1",
+    "debug": "3.1.0",
+    "express": "4.16.3",
+    "jsonwebtoken": "8.3.0",
+    "moment": "^2.22.2",
+    "mongoose": "5.2.7",
+    "morgan": "1.9.0"
+  },
+  "devDependencies": {
+    "eslint": "5.4.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0"
+  },
+  "nodemoneConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500"
+  }
+}
