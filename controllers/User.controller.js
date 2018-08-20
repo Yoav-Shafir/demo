@@ -11,7 +11,7 @@ class UserController {
   }
 
   static async login(req, res) {
-    const { email, password } = req.body.email;
+    const { email, password } = req.body;
     try {
       const token = await UserService.login(email, password);
       return res.send(token);

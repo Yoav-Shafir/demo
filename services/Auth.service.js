@@ -6,7 +6,7 @@ class AuthService {
   static isValidPassword(password1, password2) {
     return new Promise((resolve, reject) => {
       bcrypt.compare(password1, password2, (err, res) => {
-        res ? resolve() : reject(err);
+        res ? resolve(res) : reject(err);
       });
     });
   }

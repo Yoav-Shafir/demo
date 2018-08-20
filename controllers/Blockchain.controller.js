@@ -12,7 +12,8 @@ class BlockchainController {
 
   static async get(req, res) {
     try {
-      const block = await BlockchainService.get(req.query.limit);
+      const { limit } = req.query;
+      const block = await BlockchainService.get(parseInt(limit, 10));
       return res.send(block);
     } catch (err) {
       return res.status(404).send(err);
